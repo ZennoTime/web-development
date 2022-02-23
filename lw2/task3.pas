@@ -1,6 +1,6 @@
 PROGRAM Hello(INPUT, OUTPUT);
 USES
-  dos;
+  DOS;
 VAR
   St1: STRING;
   Find: INTEGER;

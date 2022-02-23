@@ -1,6 +1,6 @@
 PROGRAM WebSarahRevere(INPUT, OUTPUT);
 USES
-  Dos;
+  DOS;
 VAR
   S1: STRING;
 BEGIN

@@ -1,5 +1,5 @@
 PROGRAM PrintEnviroment(INPUT, OUTPUT);
-USES 
+USES
   DOS;
 BEGIN {PrintEnviroment}
   WRITELN('Content-Type: text/plain');
@@ -9,4 +9,4 @@ BEGIN {PrintEnviroment}
   WRITELN(GetEnv('CONTENT_LENGTH'), ' - CONTENT_LENGTH');
   WRITELN(GetEnv('HTTP_USER_AGENT'), ' - HTTP_USER_AGENT');
   WRITELN(GetEnv('HTTP_HOST'), ' - HTTP_HOST')
-END. {PrintEnviroment}       
+END. {PrintEnviroment}
