@@ -10,7 +10,7 @@ BEGIN
   N1 := POS(Key + '=', S1);
   IF N1 = 0
   THEN
-    WRITELN('Choose right key, don''t'' forget about ''='' ')
+    WRITELN('Choose right key, don''t forget about ''='' ')
   ELSE
     BEGIN
       N1 := N1 + Length(Key) + 1;
