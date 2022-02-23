@@ -13,9 +13,9 @@ BEGIN
     WRITELN('Choose right key, don''t forget about ''='' ')
   ELSE
     BEGIN
-      N1 := N1 + Length(Key) + 1;
+      N1 := N1 + LENGTH(Key) + 1;
       N2 := N1;
-      WHILE S1[N2] <> '&'
+      WHILE (S1[N2] <> '&') AND (N2 <= LENGTH(S1))
       DO
         N2 := N2 + 1;
       GetQueryStringParameter := COPY(S1, N1, N2 - N1)
