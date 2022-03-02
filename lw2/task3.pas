@@ -13,5 +13,13 @@ BEGIN
   THEN
     WRITELN('Hello Anonymous!')
   ELSE
-    WRITELN('Hello Dear, ', COPY(St1, 6, LENGTH(St1) - 5), '!')
+    BEGIN
+      Find := POS('&', St1);
+      WRITE('Hello dear, ');
+      IF Find = 0
+      THEN
+        WRITELN(COPY(St1, 6, LENGTH(St1)-5))
+      ELSE
+        WRITELN(COPY(St1, 6, Find - 6))
+    END
 END.
