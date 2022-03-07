@@ -14,7 +14,7 @@ function PasswordStrength(string $password): ?int
         {
             $countNum++;
         }
-    }
+    
 
         if (ctype_upper($password[$i]))
         {
@@ -25,6 +25,7 @@ function PasswordStrength(string $password): ?int
         {
             $countLowerCaseChars++;
         }
+    }
     
     if ($lenPassword <> 0)
     {
@@ -38,7 +39,6 @@ function PasswordStrength(string $password): ?int
 
     if ($countUpperCaseChars <> 0)
     {
-        if (!ctype_upper($password))
         {                             // проверяем условие, что не все символы верхнего регистра, иначе n = 0
             $reliability += ($lenPassword - $countUpperCaseChars) * 2; //прибавляем количество символов - кол-во символов в верхнем регистре * 2
         }   
@@ -46,7 +46,6 @@ function PasswordStrength(string $password): ?int
 
     if ($countLowerCaseChars <> 0)
     {
-        if (!ctype_lower($password)) // проверяем условие, что не все символы нижнего регистра, иначе n = 0 
         {    
             $reliability += ($lenPassword - $countLowerCaseChars) * 2; //прибавляем количество символов - кол-во в ниж рег * 2
         }
