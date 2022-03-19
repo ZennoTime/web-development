@@ -7,12 +7,13 @@ if (is_null($email))
     echo 'no_email'; 
 else
 {
-    $compiledFilePath = getcwd() . '\\' . $stashPath . '\\' . $email;
+    $compiledFilePath = __DIR__ . '\\' . $stashPath . DIRECTORY_SEPARATOR . $email;
     if (file_exists($stashPath . '\\' . $email) !== false)
     {
         $fileHandle = fopen($compiledFilePath, 'rt');
         while ($line = fgets($fileHandle)) 
             echo $line;
+        fclose($fileHandle);
     }
     else
         echo "\n";

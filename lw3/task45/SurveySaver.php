@@ -1,12 +1,18 @@
 <?php
 header('Content-Type: text/plain');
 
-# http://localhost:8080/SurveySaver.php?email=test01@mail.ru&first_name=Peter
+# http://localhost:8080/SurveySaver.php?email=test01@mail.ru&age=30&first_name=Peter&last_name=Jones
 # http://localhost:8080/SurveySaver.php?email=test01@mail.ru&age=30
 
 const NO_EMAIL_ERROR = 0;
 const FILE_ERROR = 1;
 const RECORD_CREATED_OK = 2;
+
+$firstName = is_null($_GET['first_name']) ? '' : $_GET['first_name'];
+$lastName = is_null($_GET['last_name']) ? '' : $_GET['last_name'];
+$age = is_null($_GET['age']) ? '' : $_GET['age'];
+$email = is_null($_GET['email']) ? '' : $_GET['email'];
+echo dumpUserData($email, $firstName, $lastName, $age);
 
 function parseUserFile(string $filename, array $parameters, array $parametersDescriptions): ?array
 {
@@ -22,7 +28,7 @@ function parseUserFile(string $filename, array $parameters, array $parametersDes
             
             # $delimiterPos = strpos(':', $line);
             if (($delimiterPos === false) & (strlen($line) !== 0)) {
-                return NULL;  # файл поврежден, не работаем с ним
+                return null;  # файл поврежден, не работаем с ним
             }
             $parameterName = substr($line, 0, $delimiterPos);  # находим описание
             $currentParameterIndex = array_search($parameterName, $parametersDescriptions);  # по описанию находим, где он будет находится в $parameters
@@ -40,7 +46,7 @@ function parseUserFile(string $filename, array $parameters, array $parametersDes
         fclose($fileHandle);
         return $parameters;
     } else {
-        return NULL;  # что то пошло не так, неизвестно что
+        return null;  # что то пошло не так, неизвестно что
     } 
 }
 
@@ -56,7 +62,8 @@ function createUserFile(string $filename, array $parameters, array $parametersDe
         if ($status === false)
             return false;  # Если произошла ошибка во время записи, выводим false
     }
-    
+
+    fclose($fileHandler);
     return true;  # ошибок не возникало, выводим true
 }
 
@@ -99,10 +106,4 @@ function dumpUserData(string $email, string $firstName, string $lastName, string
     
     return 'ok';
 }
-
-$firstName = is_null($_GET['first_name']) ? '' : $_GET['first_name'];
-$lastName = is_null($_GET['last_name']) ? '' : $_GET['last_name'];
-$age = is_null($_GET['age']) ? '' : $_GET['age'];
-$email = is_null($_GET['email']) ? '' : $_GET['email'];
-echo dumpUserData($email, $firstName, $lastName, $age);  # выводим статус операции
-# http://localhost:8080/SurveySaver.php?email=vasya@mail.ru&first_name=vasilii&age=20&last_name=pupkeen
+# http://localhost:8080/SurveySaver.php?email=test01@mail.ru&age=30&first_name=Jenny&last_name=Jones
