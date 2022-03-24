@@ -1,0 +1,130 @@
+h1{
+    font: 600 100px/122.35% 'Montserrat', sans-serif;
+}
+
+.text{
+    font-family: 'Roboto';
+}
+
+.span_pink{
+    color: #EE58B6;
+}
+
+.logo{
+    font: 700 30.8354px/122.33% 'Montserrat', sans-serif;
+}
+
+.point_not_decoration{
+    list-style-type: none;
+}
+
+.point__link_not_decoration{
+    text-decoration: none;
+    color: #000;
+}
+
+.button{
+    height: 55px;
+    box-sizing: border-box;
+    border-radius: 4.59px;
+    background-color: #05090C;
+    color: #fff;
+    font: 600 16px 'Montserrat', sans-serif
+}
+
+.button_short{
+    padding: 19px 40px;
+    width: 247px;
+}
+
+.button_long{
+    padding: 19px 82.5px;
+    width: 332px;
+}
+
+.main_img{
+    width: 762px;
+    height: 636.87px;
+}
+
+.for_whom{
+    background-color: #000;
+    color: #fff;
+}
+
+.for_whom__block1{
+    width: 285px;
+    height: 145px;
+}
+
+.for_whom__block2{
+    width: 337px;
+    height: 132px;
+}
+
+.for_whom__block3{
+    width: 293px;
+    height: 132px;
+}
+
+.for_whom__description{
+    font: 400 120% 'Roboto', sans-serif;
+}
+
+.motivation_block1__num1{
+    width: 574px;
+    height: 134.97px;
+}
+
+.motivation_block1__num2{
+    width: 574px;
+    height: 131.1px;
+}
+
+.motivation__heading{
+    font: 500 48px/126.06% 'Montserrat', sans-serif;
+}
+
+.description__heading{
+    font: 500 48px/59px 'Montserrat', sans-serif;
+}
+
+.description__block{
+    width: 358px;
+    height: 190px;
+    background-color: #000;
+    color: #fff;
+}
+
+.description__block1{
+    padding: 32.36px 48.98px 37.27px 39.25px;
+}
+
+.description__block2{
+    padding: 32.36px 48.5px 37.27px 39.74px;
+}
+
+.description__block3{
+    padding: 32.36px 48.02px 37.27px 39.22px;
+}
+
+.description__block4{
+    padding: 33.22px 48.98px 37.27px 37.12px;
+}
+
+.description__block5{
+    padding: 33.22px 48.98px 37.27px 37.12px;
+}
+
+.description__block6{
+    padding: 33.22px 48.98px 37.27px 37.12px;
+}
+
+footer{
+    background-color: #000;
+    color: #fff;
+}
+
+.footer__text{
+    font: 700 30.8354px/122.33% 'Montserrat', sans-serif;
+}
