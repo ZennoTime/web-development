@@ -3,7 +3,7 @@ h1{
 }
 
 .text{
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
 }
 
 .span_pink{
@@ -71,17 +71,17 @@ h1{
     font: 400 120% 'Roboto', sans-serif;
 }
 
-.motivation_block1__num1{
+.information_block1__phrase1{
     width: 574px;
     height: 134.97px;
 }
 
-.motivation_block1__num2{
+.information_block1__phrase2{
     width: 574px;
     height: 131.1px;
 }
 
-.motivation__heading{
+.information__heading{
     font: 500 48px/126.06% 'Montserrat', sans-serif;
 }
 
